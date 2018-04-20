@@ -36,7 +36,7 @@ git clone https://github.com/konglhui/titanic-translate.git(从github中下载�
 
 修改文件（步骤同修改文件一样）
 
-##将本地文件提交到github云仓库中
+## 将本地文件提交到github云仓库中
 
 1.git remote add origin git@github.com:konglhui/仓库名.git
 

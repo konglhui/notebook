@@ -1,18 +1,19 @@
 #include<stdio.h>
 
-void main(){
+int  main(){
 	int ch;
 	int num1 = 1;
 	int num2 = 0;
 	int num3 = 0;
-	for (num1;num1<10;num1++){
-		printf("è¾“å…¥æ•°å­—ï¼š\n");
+	for (num1 = 1;num1<10;num1++){
+		printf("ÊäÈëÊı×Ö\n");
+		fflush(stdin);
 		scanf("%d",&ch);
 		if (ch<0){
 			continue;
 		}
 		else if(ch>=0 && ch != 999){
-			num2++
+			num2++;
 			num3 += ch;
 		}
 		else{
@@ -20,6 +21,6 @@ void main(){
 		}
 
 	}
-	printf("å¤§å†™å­—æ¯æœ‰%dä¸ªï¼Œå°å†™å­—æ¯æœ‰%dä¸ª\n",num3,num2 );
+	printf("ÕıÊıÖ®ºÍÎª£º%d",num3);
 
 }

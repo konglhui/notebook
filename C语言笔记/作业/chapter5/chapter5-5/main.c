@@ -15,16 +15,17 @@ int main(){
 			}
 			printf("\n");
 		}
-		else if  (linear_num = input_num){
+		else if (linear_num == input_num){
 			printf("\n");
 		}
 		else if (linear_num > input_num){
 			row_num2 = linear_num - input_num;
-			for (j = 0;j < row_num2,j++){
+			for (j = 0;j < row_num2;j++){
 				printf("%d",row_num2);
-			
+
 			}
 			printf("\n");
 		}
+		fflush(stdin);
 	}
 }

@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void main(){
+int main(){
 	int const_num = 4;
 	int sum= 0;
 	int sum_single = 1;

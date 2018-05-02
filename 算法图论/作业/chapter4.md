@@ -1,0 +1,70 @@
+# chapter 4
+
+## 4.1
+
+请编写前述sum函数的代码。    
+
+```python
+def sum(arr):
+	if arr == []:
+		return 0
+	else :
+		return arr[0] + sum(arr[1:])
+
+print(sum([1,2,3,4]))
+```
+## 4.2
+
+编写一个递归函数来计算列表包含的元素数。    
+
+```python
+def sum(arr):
+	if arr == []:
+		return 0
+	else :
+		return 1 + sum(arr[1:])
+
+print(sum([1,2,3,4]))
+```
+
+## 4.3
+
+找出列表中最大的数字。
+
+```python
+def sum(arr):
+	if len(arr) == 1:
+		return arr[0]
+	else :
+		if arr[1] > arr[0]:
+			return sum(arr[1:])
+		else:
+			arr[0],arr[1] = arr[1],arr[0]
+			return sum(arr[1:])
+
+print(sum([1,2,3,4,21,8,4,6]))
+```
+
+## 
+
+4.4 还记得第1章介绍的二分查找吗？它也是一种分而治之算法。你能找出二分查找算法的基线条件和递归条件吗？
+
+基线条件：当前值与所找的值相同。
+
+递归条件：将数组分成两半，将其中的一半丢弃。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

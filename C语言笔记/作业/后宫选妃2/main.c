@@ -19,6 +19,7 @@
 int main()
 {
     int i,j;          //循环变量，多次使用
+    int num = 0;
     int count = 5;  //存放当前娘娘的总数
     int currDay = 0;//游戏当前进行到了第几天
     int choice;     //用来存放用户的选择
@@ -39,56 +40,68 @@ int main()
     printf("2、翻牌宠幸\t\t（修改状态）\n");
     printf("3、打入冷宫！\t\t（删除）\n");
     printf("4、朕的爱妃呢？\t\t（查找）\n");
-    printf("陛下请选择：");
-    scanf("%d", &choice);
-    switch(choice)
-    {
-    case 1:
-        if (count < MAX)
-        {
-            //添加人数操作
-            printf("请输入娘娘的名讳");
-            scanf("%s",names[count]);
-            level[count] = 0;
-            loves[count] =100;
-            count++;
-        }
 
-        else
+    do {
+        printf("陛下请选择：");
+        scanf("%d", &choice);
+        switch(choice)
         {
-            printf("陛下要注意龙体，后宫已经人满为患\n")；
-        }
-        break;
-                if(strcmp(name, names[i]) == 0){
-                    index = i;
-                    continue;
+        case 1:
+            if (count < MAX)
+            {
+                //添加人数操作
+                printf("请输入娘娘的名讳:");
+                scanf("%s",names[count]);
+                level[count] = 0;
+                loves[count] =100;
+                count++;
+            }
+
+            else
+            {
+                printf("陛下要注意龙体，后宫已经人满为患\n");
+            }
+            break;
+        case 2://字符串进行比较
+            printf("请输入娘娘的名讳：");
+            scanf("%s",tempname);
+            for (i = 0;i<count;i++)
+            {
+                if (strcmp(tempname, names[i]) == 0)
+                {
+                    loves[i] +=20;
                 }
-    case 2://字符串进行比较
-        printf("请输入娘娘的名讳");
-        scanf("%s",name);
-        if(strcmp(name, names[i]) == 0)
-        {
-        	index =i;
-        	loves[index] +=30;
-        	for(j=0;j<count;j++)
-        	{
-        		loves[j] -=10;
-        	}
+                else
+                {
+                     loves[i] -=10;
+                }
+            }
+            break;
+        case 3:
+            printf("请输入娘娘的名讳");
+            for (i = 0;i<count;i++)
+            scanf("%s",tempname);
+            {
+                if (strcmp(tempname, names[i]) == 0)
+                {
+                    loves[i] +=20;
+                }
+                else
+                {
+                     loves[i] -=10;
+                }
+            }
+            break;
+        case 4:
+            break;
         }
-        else
-        {
-        	printf("你要的并不在，找错了。")；
-        }
-        break；
-    case 3:
-        printf("请输入娘娘的名讳");
-        scanf("%s",name);
-        if(strcmp(name, names[i]) == 0)
-        {
-        	break;
-        }
-        break;
-    case 4:
-        break;
+    for(i = 0;i<count;i++)
+    {
+        printf("%-12s %-12s %-12d\n",names[i],levelNames[level[i]],loves[i]);
     }
+
+
+    num ++;
+    }while(num<=10);
+
 }

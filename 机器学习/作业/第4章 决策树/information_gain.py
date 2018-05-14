@@ -1,3 +1,4 @@
+import math
 #生成节点
 #attr 保存当前节点的属性
 #label 保存当前结点的标签
@@ -61,19 +62,23 @@ def attr_separation(dataset):
 
 #计算信息增益
 def information_gain(dataset,attr_key):
-    pass #明天晚上再写吧，好几把多啊。真的烦
-    
-    
+    #计算总的信息熵
+    count = 0
+    ent_label_count = classify_label(dataset.colums[-1])
+    for value in ent_label_count.values():
+        count += value
+        num = value
+    ent = information_entropy(count,num)
+
+    #计算单个的信息熵
+    for 
 
 
 #计算信息熵
 #count:样例的总数
 #num  :正例的个数
 def information_entropy(count,num):
-    entropy = 0
-    import math
-    entropy = -(num/count*(math.log2(num/count)) + (count-num)/count * math.log2((count-num)/count))
-    return entropy
+    return -(num/count*(math.log2(num/count)) + (count-num)/count * math.log2((count-num)/count))
 
 
 

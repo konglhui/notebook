@@ -5,6 +5,6 @@ using namespace std;
 int main()
 {
     cout << "konglinghui" << endl;
-    cout<<"婵湱鍠曠€氾拷"<<endl;
+    cout<<"koasd"<<endl;
     return 0;
 }

@@ -5,8 +5,8 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "ÊäÈëÒ»¸öÕûÊın£º" << endl;
+    cout << "è¾“å…¥ä¸€ä¸ªæ•´æ•°nï¼š" << endl;
     cin>>n;
-    cout<<n<<"ÀË"<<" = "<<n*220<<"Âë"<<endl;
+    cout<<n<<"æµª"<<" = "<<n*220<<"ç "<<endl;
     return 0;
 }

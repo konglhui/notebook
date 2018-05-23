@@ -273,13 +273,47 @@ int main()
     std::cin>>book;
     do{
     std::cin>>current_book;
-    if (book.isbn == current_book.isbn);
+    if (book.isbn == current_book.isbn)
         book += current_book;
 
     }while(current_book.isbn == book.isbn);
     std::cout <<book<<std::endl;
     return 0;
 }
+```
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180523/kl04bi8JJe.png)
+
+1.23
+
+```c++
+#include<iostream>
+#include "Sales_item.h"
+
+int main()
+{
+    Sales_item book,current_book;
+    if (std::cin>>current_book){
+        int cnt = 1;
+        while(std::cin>>book){
+            if (book.isbn() == current_book.isbn())
+                ++cnt;
+            else{
+                std::cout<<current_book<<" orcus "<<cnt <<" times"<<std::endl;
+                current_book = book;
+                cnt = 1;
+            }
+        }
+        std::cout << current_book<<" occurs "<<cnt<<" times"<<std::endl;
+    }
+    return 0;
+}
+```
+
+1.24
+
+```c++
+//如上
 ```
 
 

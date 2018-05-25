@@ -112,6 +112,110 @@ d.没有错误
 
 `global_str` 和 `global_int` 是全局变量，所以初值分别为空字符串和 0 。 `local_int` 是局部变量并且没有初始化，它的初值是未定义的。 `local_str` 是 string 类的对象，它的值由类确定，为空字符串。 
 
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/BkdbcmLf5C.png)
+
+## 2.11
+
+a.定义
+
+b.定义
+
+c.声明
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/L2bkii1ea3.png)
+
+## 2.12 
+
+a，c，d违法
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/FjB6haGDFI.png)
+
+## 2.13
+
+J = 100
+
+## 2.14
+
+I = 100,SUM = 45
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/A88150jEdJ.png)
+
+## 2.15
+
+d：引用必须是对象
+
+d：引用必须初始化
+
+## 2.16
+
+都合法
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/Aa51lghcFH.png)
+
+## 2.18
+
+```c++
+int i = 0;
+int *ptr_i = &i;
+ptr_i = 0;	//更改指针的值
+*ptr_i = 0;	//更改指针所指的值
+```
+
+## 2.19
+
+指针是指向的对象的地址，并且指针本身就是一个对象。
+
+而引用是另一个对象的别名。
+
+引用必须初始化，而指针无需在定义时就初始化
+
+## 2.20 
+
+i = 1764
+
+## 2.21
+
+a 	非法指针和对象类型不同，
+
+b	非法因为指针只能赋地址的值。
+
+## 2.22
+
+判断是不是空指针，
+
+判断指针的对象的值是不是0：
+
+## 2.23
+
+不能，因为首先要确定这个指针是不是合法的，才能判断它所指向的对象是不是合法的。
+
+## 2.24
+
+因为viod支持任何类型，而long只支持long类型
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/E9IbHfeDkd.png)
+
+## 2.25
+
+a。	ip指针 	i值	r是i的引用
+
+b.。	i值		ip是空指针	
+
+c。	ip指针	ip2值
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/L22iLEEAeB.png)
+
+a.不合法，必须赋初值。
+
+d.不合法const不能改变。
+
+![mark](http://p6yio0wew.bkt.clouddn.com/blog/180525/5JhA5Ha70g.png)
+
+## 2.27
+
+
+
+
 
 
 

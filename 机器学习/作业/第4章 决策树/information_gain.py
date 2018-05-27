@@ -99,12 +99,9 @@ def information_entropy(count,num):
     return -(num/count*(math.log2(num/count)) + (count-num)/count * math.log2((count-num)/count))
 
 def main():
-    data = pd.read_csv('C:/Users/Administrator/Desktop/123.csv',encoding= 'ANSI')
-
+    data = pd.read_csv('C:/Users/Administrator/Desktop/123.csv',encoding= 'utf-8')
     tree = tree_generate(data)
-    if key in tree.attr_down: 
-        root = root.attr_down[key]
-        print(root)
+    print(tree)
 
 main()
 

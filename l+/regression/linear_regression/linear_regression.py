@@ -59,5 +59,5 @@ def main():
 
     print(model.mape(test_y))
 
-if __name__ =='__main'
+if __name__ =='__main__':
     main() 

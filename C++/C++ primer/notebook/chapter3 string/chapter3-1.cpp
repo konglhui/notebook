@@ -2,7 +2,7 @@
 /*
 using std::cin;
 using std::cout;
-//using ÉùÃ÷
+//using ï¿½ï¿½ï¿½ï¿½
 int main()
 {
     int i;

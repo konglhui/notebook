@@ -9,15 +9,21 @@ using std::toupper;
 
 int main()
 {
-    string word;
-    vector<string> text;
-    while (cin>>word){
-        for (auto &c:word)
-            c = toupper(c);
-        text.push_back(word);
-    }
-    for (auto a:text){
-        cout<<a<<endl;
-    }
-    return 0;
+	vector<int> ivec;
+	int i;
+	while (cin >> i){
+		ivec.push_back(i);
+	}
+	for (int i = 0; i < ivec.size() - 1; ++i){
+		cout << ivec[i] + ivec[i + 1] << endl;
+	}
+	//---------------------------------
+	cout << "---------------------------------" << endl;
+	int m = 0;
+	int n = ivec.size() - 1;
+	while (m < n){
+		cout << ivec[m] + ivec[n] << endl;
+		++m;    --n;
+	}
+	return 0;
 }

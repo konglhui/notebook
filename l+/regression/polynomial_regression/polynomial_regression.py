@@ -1,5 +1,3 @@
-#because the unmber is biger,so some times it doesn't work.
-
 import numpy as np
 import pandas as pd 
 
@@ -46,7 +44,7 @@ def feature_polynomil(x,n = 2):
     for i in range(1,n):
         a = x.columns
         for column in  a:
-            x[column + "-" + str(i)] = x.loc[:,column]**(i+1)
+            x[column + "-" + str(i)] = x[column]**(i+1)
     return x       
 
 def main():
@@ -56,7 +54,7 @@ def main():
     feature = df[['btc_total_bitcoins','btc_transaction_fees']]
     target = df['btc_market_price']
     n_feature = feature_polynomil(feature,n = 5)
-    n_feature.dropna(inplace=True)
+
     train_x,test_x,train_y,test_y = train_test_split(n_feature,target)
     
     model = polynomial_regression()

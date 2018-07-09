@@ -5,5 +5,5 @@
         "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
-    "python.pythonPath": "/usr/bin/python3"
+    "python.pythonPath": "/home/klh/.conda/envs/tensorflow/bin/python"
 }

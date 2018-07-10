@@ -7,3 +7,26 @@
 
 try use random select hyperparameters.
 
+
+
+### Normalizing inputs to speed up learning
+
+$$
+\mu = \frac{1}{m}\sum x^{(i)}\
+$$
+
+$$
+x = x-\mu
+$$
+
+$$
+\theta^2 = \frac{1}{m}\sum x^{(i)2}
+$$
+
+$$
+x = \frac{x}{\theta^2}
+
+$$
+
+
+

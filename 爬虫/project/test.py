@@ -1,15 +1,12 @@
-html = """
-<html><head><title>The Dormouse's story</title></head>
-<body>
-<p class="title" name="dromouse"><b>The Dormouse's story</b></p>
-<p class="story">Once upon a time there were three little sisters; and their names were
-<a href="http://example.com/elsie" class="sister" id="link1"><!-- Elsie --></a>,
-<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
-<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
-and they lived at the bottom of a well.</p>
-<p class="story">...</p>
-"""
-from bs4 import BeautifulSoup
+import requests
+url = 'https://toutiao.com/a6576439451487044104/'
+headers = {
 
-soup = BeautifulSoup(html,'lxml')
-print(soup.a.get_attrs['href'])
+'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+}
+
+response = requests.get(url,headers = headers)
+print(response.text)
+
+
+
